@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Automation Portfolio — Jorge Quintas Baez</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0e1729;
+      border-bottom: 3px solid #06b6d4;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .brand { color: #22d3ee; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+    header .tagline { color: #94a3b8; font-size: 12px; }
+
+    .hero {
+      padding: 60px 40px 40px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 900;
+      color: #06b6d4;
+      line-height: 1.15;
+    }
+    .hero h1 span { color: #f1f5f9; }
+    .hero p {
+      margin-top: 14px;
+      color: #94a3b8;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 640px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #06b6d4;
+      opacity: 0.4;
+      margin: 32px 0;
+    }
+
+    .cards {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .card {
+      background: #0e1729;
+      border-radius: 10px;
+      border-left: 4px solid #06b6d4;
+      padding: 32px 36px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+    }
+    .card:nth-child(2) { border-left-color: #10b981; }
+
+    .card-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: #06b6d4;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .card:nth-child(2) .card-num { color: #10b981; }
+
+    .card h2 {
+      font-size: 20px;
+      font-weight: 900;
+      color: #f1f5f9;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .card .subtitle {
+      display: inline-block;
+      background: #162035;
+      color: #06b6d4;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .card:nth-child(2) .subtitle { color: #10b981; }
+
+    .card p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 160px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 7px;
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: opacity 0.15s;
+      text-align: center;
+    }
+    .btn:hover { opacity: 0.85; }
+
+    .btn-primary {
+      background: #06b6d4;
+      color: #0b1120;
+    }
+    .card:nth-child(2) .btn-primary { background: #10b981; }
+
+    .btn-secondary {
+      background: #162035;
+      color: #94a3b8;
+      border: 1px solid #1e3050;
+    }
+
+    .stats {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .stat-box {
+      background: #0e1729;
+      border: 1px solid #1e3050;
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-box .val {
+      font-size: 26px;
+      font-weight: 900;
+      color: #06b6d4;
+    }
+    .stat-box .lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-top: 4px;
+    }
+    .stat-box .sub {
+      font-size: 10px;
+      color: #94a3b8;
+      margin-top: 2px;
+      font-weight: 300;
+    }
+
+    .about {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px 60px;
+    }
+    .about h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #06b6d4;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .about p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 640px;
+    }
+    .about .contact {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .contact-link {
+      color: #22d3ee;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-link:hover { text-decoration: underline; }
+
+    .tags {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      background: #0e1729;
+      border: 1px solid #1e3050;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.3px;
+    }
+
+    footer {
+      background: #0e1729;
+      border-top: 1px solid #1e3050;
+      padding: 16px 40px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 300;
+    }
+
+    @media (max-width: 640px) {
+      .hero, .cards, .stats, .about, .tags { padding-left: 20px; padding-right: 20px; }
+      .card { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="brand">n8n  |  AI AUTOMATION SPECIALIST</span>
+  <span class="tagline">Jorge Quintas Baez · Portfolio 2024–2026</span>
+</header>
+
+<div class="hero">
+  <h1>AI Automation<br><span>Portfolio</span></h1>
+  <p>Research studies, workflow blueprints and real-world automation cases built with <strong style="color:#f1f5f9">n8n</strong>, LLMs and AI Agents. Focused on SMB automation, Voice AI pipelines and agentic workflow design.</p>
+  <hr class="divider">
+</div>
+
+<div class="stats">
+  <div class="stat-box"><div class="val">75%</div><div class="lbl">SMBs testing AI</div><div class="sub">already experimenting</div></div>
+  <div class="stat-box"><div class="val">58%</div><div class="lbl">Save 20h+/month</div><div class="sub">with automation</div></div>
+  <div class="stat-box"><div class="val">47%</div><div class="lbl">Cost reduction</div><div class="sub">avg. in support</div></div>
+  <div class="stat-box"><div class="val">3–5m</div><div class="lbl">Payback period</div><div class="sub">typical ROI</div></div>
+</div>
+
+<div class="cards">
+
+  <div class="card">
+    <div>
+      <div class="card-num">DOCUMENT 01 · MARKET RESEARCH</div>
+      <h2>Top 10 AI Agent Automations Most Requested by SMBs</h2>
+      <span class="subtitle">Research Study 2024–2026</span>
+      <p>Cross-referenced study from 12 specialized sources identifying the AI agent automations with the highest real demand from small and medium-sized businesses. Includes documented ROI figures, implementation complexity ratings, and an executive comparison table for prioritization.</p>
+    </div>
+    <div class="card-actions">
+      <a class="btn btn-primary" href="Top10_Automatizaciones_IA_PYMEs_v2.pdf" target="_blank">
+        📄 Open PDF
+      </a>
+      <a class="btn btn-secondary" href="Top10_Automatizaciones_IA_PYMEs_v2.pdf" download>
+        ⬇ Download
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div>
+      <div class="card-num">DOCUMENT 02 · TECHNICAL PORTFOLIO</div>
+      <h2>Voice AI Agent Engineering — Call Automation with n8n</h2>
+      <span class="subtitle">Technical Architecture & Platform Comparison</span>
+      <p>Technical portfolio covering the architecture, platform comparison and real implementation of Voice AI agent systems integrated with n8n workflows. Head-to-head analysis of Retell AI, Vapi, Bland AI and ElevenLabs with production-ready flow design patterns and cost analysis.</p>
+    </div>
+    <div class="card-actions">
+      <a class="btn btn-primary" href="Voice_AI_Agent_Engineering_Portfolio.pdf" target="_blank">
+        📄 Open PDF
+      </a>
+      <a class="btn btn-secondary" href="Voice_AI_Agent_Engineering_Portfolio.pdf" download>
+        ⬇ Download
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="about">
+  <h3>ABOUT</h3>
+  <p>I design and build AI automation systems for SMBs and online businesses — from simple workflow automation to full agentic pipelines with LLMs, RAG and Voice AI. My focus: pragmatic automation that delivers measurable ROI, using n8n as the orchestration backbone and LLMs where they genuinely reduce manual work.</p>
+  <div class="contact">
+    <a class="contact-link" href="https://www.linkedin.com/in/jorgequintasbaez/" target="_blank">🔗 LinkedIn</a>
+    <a class="contact-link" href="mailto:jorge.quintasb@gmail.com">📩 jorge.quintasb@gmail.com</a>
+    <a class="contact-link" href="https://github.com/usrjorgit/ai-automation-portfolio" target="_blank">📁 GitHub Repo</a>
+  </div>
+</div>
+
+<div class="tags">
+  <span class="tag">n8n</span>
+  <span class="tag">Make</span>
+  <span class="tag">Zapier</span>
+  <span class="tag">OpenAI</span>
+  <span class="tag">Anthropic Claude</span>
+  <span class="tag">RAG</span>
+  <span class="tag">LangChain</span>
+  <span class="tag">Voice AI</span>
+  <span class="tag">Retell AI</span>
+  <span class="tag">Vapi</span>
+  <span class="tag">WhatsApp API</span>
+  <span class="tag">Airtable</span>
+  <span class="tag">Google Drive</span>
+  <span class="tag">Shopify</span>
+  <span class="tag">Notion</span>
+  <span class="tag">AI Agents</span>
+</div>
+
+<footer>
+  Jorge Quintas Baez · n8n Expert · AI Automation Architect · Voice AI Specialist · 2024–2026
+</footer>
+
+</body>
+</html>
