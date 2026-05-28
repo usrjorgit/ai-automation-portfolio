@@ -9,7 +9,7 @@
 ## Published Documents
 
 ### 1 · Top 10 AI Agent Automations Most Requested by SMBs (2024–2026)
-**`Top10_Automatizaciones_IA_PYMEs_v2.pdf`**
+**[📄 Open PDF](https://usrjorgit.github.io/ai-automation-portfolio/Top10_Automatizaciones_IA_PYMEs_v2.pdf)** · `Top10_Automatizaciones_IA_PYMEs_v2.pdf`
 
 A market research study identifying the 10 AI agent automations with the highest real demand from small and medium-sized businesses and online retailers. Based on cross-referenced data from 12 specialized sources including n8n.io, Salesforce SMB Trends Report, Thryv 2025 AI Survey, and leading automation agencies.
 
@@ -37,7 +37,7 @@ A market research study identifying the 10 AI agent automations with the highest
 ---
 
 ### 2 · Voice AI Agent Engineering — Intelligent Call Automation with n8n
-**`Voice_AI_Agent_Engineering_Portfolio.pdf`**
+**[📄 Open PDF](https://usrjorgit.github.io/ai-automation-portfolio/Voice_AI_Agent_Engineering_Portfolio.pdf)** · `Voice_AI_Agent_Engineering_Portfolio.pdf`
 
 A technical portfolio covering the architecture, platform comparison and real implementation of Voice AI agent systems integrated with n8n workflows. Covers Retell AI, Vapi, Bland AI and ElevenLabs with production-ready flow design.
 
